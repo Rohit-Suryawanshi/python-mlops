@@ -26,7 +26,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import os
 import pandas as pd
-from sklearn.linear_model import Ridge
+from sklearn.linear_model import Ridge, Lasso
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
@@ -45,7 +45,7 @@ def split_data(df):
 
 # Train the model, return the model
 def train_model(data, ridge_args):
-    reg_model = Ridge(**ridge_args)
+    reg_model = Lasso(**ridge_args)
     reg_model.fit(data["train"]["X"], data["train"]["y"])
     return reg_model
 
