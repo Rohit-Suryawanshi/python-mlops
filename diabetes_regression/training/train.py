@@ -26,7 +26,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import os
 import pandas as pd
-from sklearn.linear_model import Lasso
+from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
